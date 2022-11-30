@@ -46,13 +46,13 @@ namespace SmartExpense.Pages
             this.CbAccounts = new System.Windows.Forms.ComboBox();
             this.TbSearch = new System.Windows.Forms.TextBox();
             this.DgvTransactionTable = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.PnlDataHolder.SuspendLayout();
             this.PnlBalance.SuspendLayout();
             this.PnlExpence.SuspendLayout();
@@ -211,6 +211,8 @@ namespace SmartExpense.Pages
             // 
             // DgvTransactionTable
             // 
+            this.DgvTransactionTable.AllowUserToAddRows = false;
+            this.DgvTransactionTable.AllowUserToDeleteRows = false;
             this.DgvTransactionTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvTransactionTable.BackgroundColor = System.Drawing.Color.LightGray;
             this.DgvTransactionTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -234,31 +236,6 @@ namespace SmartExpense.Pages
             this.DgvTransactionTable.Size = new System.Drawing.Size(459, 302);
             this.DgvTransactionTable.TabIndex = 0;
             // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // Account
-            // 
-            this.Account.HeaderText = "Account";
-            this.Account.Name = "Account";
-            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -278,6 +255,32 @@ namespace SmartExpense.Pages
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(173, 177);
             this.panel2.TabIndex = 3;
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
+            // Account
+            // 
+            this.Account.HeaderText = "Account";
+            this.Account.Name = "Account";
             // 
             // MainPage
             // 

@@ -47,6 +47,10 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Database\DatabaseController.cs" />
+        <Compile Include="Models\Account.cs" />
+        <Compile Include="Models\Transaction.cs" />
+        <Compile Include="Models\User.cs" />
         <Compile Include="PageFactory.cs" />
         <Compile Include="Pages\AccountPage.cs">
           <SubType>UserControl</SubType>
@@ -116,10 +120,6 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Data" />
-      <Folder Include="Models" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
