@@ -1,0 +1,15 @@
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\SmartExpense.exe.config
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\SmartExpense.exe
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\SmartExpense.pdb
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.AssemblyReference.cache
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.SuggestedBindingRedirects.cache
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Properties.Resources.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.GenerateResource.cache
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.CoreCompileInputs.cache
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.exe
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.pdb
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.SmartExpenseMain.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.MainPage.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.AccountPage.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.ProfilePage.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.TransactionPage.resources
