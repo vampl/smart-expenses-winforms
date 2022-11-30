@@ -43,7 +43,7 @@
             // 
             // PnlMenuBar
             // 
-            this.PnlMenuBar.BackColor = System.Drawing.Color.LightGray;
+            this.PnlMenuBar.BackColor = System.Drawing.Color.Silver;
             this.PnlMenuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PnlMenuBar.Controls.Add(this.BtnProfilePage);
             this.PnlMenuBar.Controls.Add(this.BtnAccountPage);
@@ -150,17 +150,17 @@
             this.PnlPageSpace.Location = new System.Drawing.Point(165, 0);
             this.PnlPageSpace.Margin = new System.Windows.Forms.Padding(0);
             this.PnlPageSpace.Name = "PnlPageSpace";
-            this.PnlPageSpace.Size = new System.Drawing.Size(579, 465);
+            this.PnlPageSpace.Size = new System.Drawing.Size(679, 465);
             this.PnlPageSpace.TabIndex = 1;
             // 
             // SmartExpenseMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(744, 465);
+            this.ClientSize = new System.Drawing.Size(844, 465);
             this.Controls.Add(this.PnlPageSpace);
             this.Controls.Add(this.PnlMenuBar);
-            this.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Lucida Fax", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SmartExpenseMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

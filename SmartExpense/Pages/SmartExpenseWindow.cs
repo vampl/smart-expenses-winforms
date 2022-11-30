@@ -10,6 +10,7 @@ namespace SmartExpense.Pages
         public SmartExpenseMain()
         {
             InitializeComponent();
+            LoadPage(BtnMainPage).Show();
         }
 
         // change menu bar state by it's min/max width.
