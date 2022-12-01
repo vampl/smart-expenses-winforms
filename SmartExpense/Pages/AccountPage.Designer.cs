@@ -38,7 +38,7 @@ namespace SmartExpense.Pages
             this.PnlManageTools = new System.Windows.Forms.Panel();
             this.TbSearch = new System.Windows.Forms.TextBox();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balabce = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountsTable)).BeginInit();
@@ -49,6 +49,7 @@ namespace SmartExpense.Pages
             // DgvAccountsTable
             // 
             this.DgvAccountsTable.AllowUserToAddRows = false;
+            this.DgvAccountsTable.AllowUserToDeleteRows = false;
             this.DgvAccountsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvAccountsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvAccountsTable.BackgroundColor = System.Drawing.Color.LightGray;
@@ -58,6 +59,7 @@ namespace SmartExpense.Pages
             this.DgvAccountsTable.Location = new System.Drawing.Point(15, 15);
             this.DgvAccountsTable.Margin = new System.Windows.Forms.Padding(15);
             this.DgvAccountsTable.Name = "DgvAccountsTable";
+            this.DgvAccountsTable.ReadOnly = true;
             this.DgvAccountsTable.RowTemplate.Height = 24;
             this.DgvAccountsTable.Size = new System.Drawing.Size(619, 332);
             this.DgvAccountsTable.TabIndex = 0;
@@ -126,25 +128,26 @@ namespace SmartExpense.Pages
             // 
             this.Title.HeaderText = "Title";
             this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             // 
             // Type
             // 
-            this.Type.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Type.HeaderText = "Type";
-            this.Type.Items.AddRange(new object[] { "Money", "Card" });
             this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
             this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Description
             // 
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
             // Balabce
             // 
             this.Balabce.HeaderText = "Balance";
             this.Balabce.Name = "Balabce";
+            this.Balabce.ReadOnly = true;
             // 
             // AccountPage
             // 
@@ -157,6 +160,7 @@ namespace SmartExpense.Pages
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "AccountPage";
             this.Size = new System.Drawing.Size(679, 465);
+            this.Load += new System.EventHandler(this.AccountPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountsTable)).EndInit();
             this.PnlDgvAccountsTable.ResumeLayout(false);
             this.PnlManageTools.ResumeLayout(false);
@@ -174,7 +178,7 @@ namespace SmartExpense.Pages
         private System.Windows.Forms.Button BtnAdd;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Balabce;
 
         private System.Windows.Forms.Panel PnlDgvAccountsTable;

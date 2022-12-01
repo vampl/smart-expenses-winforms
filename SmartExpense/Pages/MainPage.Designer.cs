@@ -46,13 +46,13 @@ namespace SmartExpense.Pages
             this.CbAccounts = new System.Windows.Forms.ComboBox();
             this.TbSearch = new System.Windows.Forms.TextBox();
             this.DgvTransactionTable = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PnlDataHolder.SuspendLayout();
             this.PnlBalance.SuspendLayout();
             this.PnlExpence.SuspendLayout();
@@ -236,26 +236,6 @@ namespace SmartExpense.Pages
             this.DgvTransactionTable.Size = new System.Drawing.Size(459, 302);
             this.DgvTransactionTable.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Location = new System.Drawing.Point(496, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 158);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(496, 278);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 177);
-            this.panel2.TabIndex = 3;
-            // 
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
@@ -282,6 +262,26 @@ namespace SmartExpense.Pages
             this.Account.HeaderText = "Account";
             this.Account.Name = "Account";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Location = new System.Drawing.Point(496, 100);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(173, 158);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Location = new System.Drawing.Point(496, 278);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(173, 177);
+            this.panel2.TabIndex = 3;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,6 +296,7 @@ namespace SmartExpense.Pages
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "MainPage";
             this.Size = new System.Drawing.Size(679, 465);
+            this.Load += new System.EventHandler(this.MainPage_Load);
             this.PnlDataHolder.ResumeLayout(false);
             this.PnlBalance.ResumeLayout(false);
             this.PnlExpence.ResumeLayout(false);

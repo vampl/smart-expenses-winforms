@@ -13,3 +13,14 @@ D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Page
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.AccountPage.resources
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.ProfilePage.resources
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.TransactionPage.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\MySql.Data.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\MySql.Data.EntityFramework.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\ZstdNet.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\EntityFramework.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\System.Buffers.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\System.Numerics.Vectors.dll
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\MySql.Data.xml
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\MySql.Data.EntityFramework.xml
+D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\EntityFramework.xml
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.exe.config
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.CopyComplete

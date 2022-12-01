@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace SmartExpense.Pages
 {
@@ -7,6 +8,11 @@ namespace SmartExpense.Pages
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
