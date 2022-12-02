@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using SmartExpense.Models;
 
 namespace SmartExpense.Pages
 {
@@ -11,6 +12,7 @@ namespace SmartExpense.Pages
         {
             InitializeComponent();
             LoadPage(BtnMainPage).Show();
+            new User (24242424, "11111111", "Vitaliy");
         }
 
         // change menu bar state by it's min/max width.

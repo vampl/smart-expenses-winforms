@@ -4,8 +4,8 @@ namespace SmartExpense.Models
 {
     public class Transaction
     {
-        public uint OwnerId { get; set; }
         public uint Id { get; set; }
+        public uint OwnerId { get; set; }
         public decimal Amount { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }

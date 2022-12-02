@@ -24,3 +24,4 @@ D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\MySql.Data.Entity
 D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\EntityFramework.xml
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.exe.config
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.CopyComplete
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.AccountDataFormerDialog.resources

@@ -1,14 +1,17 @@
-﻿using System.Collections.Generic;
-
-namespace SmartExpense.Models
+﻿namespace SmartExpense.Models
 {
+    // unique user record for all project.
     public class User
     {
-        public uint Id { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
+        public static uint Id { get; set; }
+        public static string Password { get; set; }
+        public static string Name { get; set; }
 
-        private List<Account> _accounts = null;
-        private List<Transaction> _transactions = null;
+        public User(uint id, string password, string name)
+        {
+            Id = id;
+            Password = password;
+            Name = name;
+        }
     }
 }

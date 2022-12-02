@@ -37,6 +37,8 @@ namespace SmartExpense.Pages
             this.BtnDelete = new System.Windows.Forms.Button();
             this.PnlManageTools = new System.Windows.Forms.Panel();
             this.TbSearch = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +57,13 @@ namespace SmartExpense.Pages
             this.DgvAccountsTable.BackgroundColor = System.Drawing.Color.LightGray;
             this.DgvAccountsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvAccountsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAccountsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Title, this.Type, this.Description, this.Balabce });
+            this.DgvAccountsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Id, this.OwnerId, this.Title, this.Type, this.Description, this.Balabce });
             this.DgvAccountsTable.Location = new System.Drawing.Point(15, 15);
             this.DgvAccountsTable.Margin = new System.Windows.Forms.Padding(15);
             this.DgvAccountsTable.Name = "DgvAccountsTable";
             this.DgvAccountsTable.ReadOnly = true;
             this.DgvAccountsTable.RowTemplate.Height = 24;
+            this.DgvAccountsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvAccountsTable.Size = new System.Drawing.Size(619, 332);
             this.DgvAccountsTable.TabIndex = 0;
             // 
@@ -101,6 +104,7 @@ namespace SmartExpense.Pages
             this.BtnDelete.TabIndex = 2;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // PnlManageTools
             // 
@@ -123,6 +127,20 @@ namespace SmartExpense.Pages
             this.TbSearch.Name = "TbSearch";
             this.TbSearch.Size = new System.Drawing.Size(451, 23);
             this.TbSearch.TabIndex = 3;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // OwnerId
+            // 
+            this.OwnerId.HeaderText = "OwnerId";
+            this.OwnerId.Name = "OwnerId";
+            this.OwnerId.ReadOnly = true;
+            this.OwnerId.Visible = false;
             // 
             // Title
             // 
@@ -167,6 +185,9 @@ namespace SmartExpense.Pages
             this.PnlManageTools.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OwnerId;
 
         private System.Windows.Forms.TextBox TbSearch;
 
