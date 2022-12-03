@@ -8,14 +8,12 @@ namespace SmartExpense.Pages
 {
     public partial class AccountPage : UserControl
     {
-        private readonly DatabaseController _databaseController;
-
         public AccountPage()
         {
             InitializeComponent();
-            _databaseController = new DatabaseController();
         }
 
+        // load from list to data grid view.
         private void LoadData(List<Account> accountsList)
         {
             DgvAccountsTable.Rows.Clear();
@@ -37,6 +35,7 @@ namespace SmartExpense.Pages
             }
         }
         
+        // add new row with user data.
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             var accountDataForm = new AccountDataFormerDialog();
@@ -47,29 +46,35 @@ namespace SmartExpense.Pages
 
             try
             {
-                _databaseController.InsertAccountData(accountDataForm.Account);
-                var accounts = _databaseController.ReadAccountData();
+                // get general connected database service.
+                var db = Locator.GetService<DatabaseController>();
+                db.InsertAccountData(accountDataForm.Account);
+                var accounts = db.ReadAccountData();
                 LoadData(accounts);
             }
             catch (Exception exception)
             {
-                MessageBox.Show($@"Error: {exception}", @"Error!", MessageBoxButtons.OK);
+                MessageBox.Show(@"Adding account error - " + exception.Message, @"Error", MessageBoxButtons.OK);
             }
         }
         
+        // load account table from database.
         private void AccountPage_Load(object sender, EventArgs e)
         {
             try
             {
-                _databaseController.ReadAccountData();
-                var accounts = _databaseController.ReadAccountData();
+                // get general connected database service.
+                var db = Locator.GetService<DatabaseController>();
+                db.ReadAccountData();
+                var accounts = db.ReadAccountData();
                 LoadData(accounts);
             } catch (Exception exception)
             {
-                MessageBox.Show($@"Error: {exception}", @"Error!", MessageBoxButtons.OK);
+                MessageBox.Show(@"Loading Account page error - " + exception.Message, @"Error", MessageBoxButtons.OK);
             }
         }
-
+        
+        // delete chosen row from data grid view. 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -87,12 +92,15 @@ namespace SmartExpense.Pages
                     Amount = decimal.Parse(DgvAccountsTable.CurrentRow.Cells[5].Value.ToString())
                 };
 
-                _databaseController.DeleteAccountData(account);
-                var accounts = _databaseController.ReadAccountData();
+                // get general connected database service.
+                var db = Locator.GetService<DatabaseController>();
+                db.DeleteAccountData(account);
+                var accounts = db.ReadAccountData();
                 LoadData(accounts);
-            } catch (Exception exception)
+            } 
+            catch (Exception exception)
             {
-                MessageBox.Show($@"Error: {exception}", @"Error!", MessageBoxButtons.OK);
+                MessageBox.Show(@"Deletion account error - " + exception.Message, @"Error", MessageBoxButtons.OK);
             }
         }
     }

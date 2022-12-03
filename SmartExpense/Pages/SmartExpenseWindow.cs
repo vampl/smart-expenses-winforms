@@ -11,8 +11,12 @@ namespace SmartExpense.Pages
         public SmartExpenseMain()
         {
             InitializeComponent();
+            
+            // Main page is the default launch page.
             LoadPage(BtnMainPage).Show();
-            new User (24242424, "11111111", "Vitaliy");
+            
+            // Static user record for demo testing
+            var user = new User (24242424, "11111111", "Vitaliy");
         }
 
         // change menu bar state by it's min/max width.
@@ -28,6 +32,7 @@ namespace SmartExpense.Pages
                 MessageBox.Show(exception.Message, @"Critical Error", MessageBoxButtons.OK);
             }
 
+            // current state.
             return "None";
         }
 
@@ -40,18 +45,13 @@ namespace SmartExpense.Pages
             // collapse each menu bar button (with text) and inactivate it.
             foreach (var button in PnlMenuBar.Controls.OfType<Button>())
             {
-                // change button by menu bar width to correct fit in.
                 button.Width = PnlMenuBar.MinimumSize.Width;
-
-                // make button inactive when collapsed.
                 button.Enabled = false;
-                
-                // change data to correct displaying.
                 button.TextAlign = ContentAlignment.MiddleCenter;
                 button.Text = (button.Tag.ToString()[0]).ToString();
             }
 
-            // current state (debug feature).
+            // current state
             return "Collapsed";
         }
 
@@ -64,21 +64,17 @@ namespace SmartExpense.Pages
             // expand each menu bar button (with text) and activate it.
             foreach (var button in PnlMenuBar.Controls.OfType<Button>())
             {
-                // change button by menu bar width to correct fit in.
                 button.Width = PnlMenuBar.MaximumSize.Width;
-                
-                // make button active when expanded.
                 button.Enabled = true;
-                
-                // change data to correct displaying.
                 button.TextAlign = ContentAlignment.MiddleCenter;
                 button.Text = button.Tag.ToString();
             }
 
-            // current state (debug feature).
+            // current state
             return "Expanded";
         }
 
+        // load page on button request
         private UserControl LoadPage(Button clickedButton)
         {
             var pageType = clickedButton.Tag.ToString();
