@@ -5,14 +5,40 @@ using SmartExpense.Models;
 
 namespace SmartExpense.Pages
 {
-    public partial class TransactionPage : UserControl
+    public partial class TransactionDataFormerDialog : Form
     {
-        public TransactionPage()
+        public TransactionDataFormerDialog()
         {
             InitializeComponent();
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // get general connected database service.
+                var db = Locator.GetService<DatabaseController>();
+                
+                var transaction = new Transaction
+                {
+                    Id = uint.Parse(TbId.Text),
+                    OwnerId = uint.Parse(TbOwnerId.Text),
+                    Amount = decimal.Parse(TbAmount.Text),
+                    Type = CbType.Text,
+                    Description = TbDesctiption.Text,
+                    Date = DtpTransactionDay.Value,
+                    AccountTitle = CbAccounts.Text
+                };
+                
+                db.UpdateTransactionData(transaction);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(@"Adding account error - " + exception.Message, @"Error", MessageBoxButtons.OK);
+            }
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -29,28 +55,13 @@ namespace SmartExpense.Pages
                     AccountTitle = CbAccounts.Text
                 };
                 
-                db.InsertTransactionData(transaction);
+                db.DeleteTransactionData(transaction);
             }
             catch (Exception exception)
             {
                 MessageBox.Show(@"Adding account error - " + exception.Message, @"Error", MessageBoxButtons.OK);
             }
         }
-
-        private void TransactionPage_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                var db = Locator.GetService<DatabaseController>();
-                var accountsTitle = db.GetAccountsTitle();
-
-                foreach (var title in accountsTitle)
-                    CbAccounts.Items.Add(title);
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(@"Loading Transaction page error - " + exception.Message, @"Error", MessageBoxButtons.OK);
-            }
-        }
+        
     }
 }

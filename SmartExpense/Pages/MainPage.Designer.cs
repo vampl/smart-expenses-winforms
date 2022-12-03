@@ -43,9 +43,9 @@ namespace SmartExpense.Pages
             this.LblIncomeValue = new System.Windows.Forms.Label();
             this.LblIncome = new System.Windows.Forms.Label();
             this.PnlDataGridView = new System.Windows.Forms.Panel();
-            this.CbAccounts = new System.Windows.Forms.ComboBox();
-            this.TbSearch = new System.Windows.Forms.TextBox();
             this.DgvTransactionTable = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,34 +180,12 @@ namespace SmartExpense.Pages
             // 
             this.PnlDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlDataGridView.BackColor = System.Drawing.Color.LightGray;
-            this.PnlDataGridView.Controls.Add(this.CbAccounts);
-            this.PnlDataGridView.Controls.Add(this.TbSearch);
             this.PnlDataGridView.Controls.Add(this.DgvTransactionTable);
             this.PnlDataGridView.Location = new System.Drawing.Point(10, 100);
             this.PnlDataGridView.Margin = new System.Windows.Forms.Padding(10);
             this.PnlDataGridView.Name = "PnlDataGridView";
             this.PnlDataGridView.Size = new System.Drawing.Size(459, 355);
             this.PnlDataGridView.TabIndex = 1;
-            // 
-            // CbAccounts
-            // 
-            this.CbAccounts.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CbAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CbAccounts.FormattingEnabled = true;
-            this.CbAccounts.Location = new System.Drawing.Point(254, 15);
-            this.CbAccounts.Margin = new System.Windows.Forms.Padding(15);
-            this.CbAccounts.Name = "CbAccounts";
-            this.CbAccounts.Size = new System.Drawing.Size(190, 24);
-            this.CbAccounts.TabIndex = 4;
-            // 
-            // TbSearch
-            // 
-            this.TbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbSearch.Location = new System.Drawing.Point(15, 15);
-            this.TbSearch.Margin = new System.Windows.Forms.Padding(15);
-            this.TbSearch.Name = "TbSearch";
-            this.TbSearch.Size = new System.Drawing.Size(209, 23);
-            this.TbSearch.TabIndex = 2;
             // 
             // DgvTransactionTable
             // 
@@ -225,42 +203,63 @@ namespace SmartExpense.Pages
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvTransactionTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvTransactionTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTransactionTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Amount, this.Type, this.Description, this.Date, this.Account });
+            this.DgvTransactionTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Id, this.OwnerId, this.Amount, this.Type, this.Description, this.Date, this.Account });
             this.DgvTransactionTable.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DgvTransactionTable.Location = new System.Drawing.Point(0, 53);
+            this.DgvTransactionTable.Location = new System.Drawing.Point(0, 0);
             this.DgvTransactionTable.Margin = new System.Windows.Forms.Padding(0);
             this.DgvTransactionTable.MultiSelect = false;
             this.DgvTransactionTable.Name = "DgvTransactionTable";
+            this.DgvTransactionTable.ReadOnly = true;
             this.DgvTransactionTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DgvTransactionTable.RowTemplate.Height = 24;
-            this.DgvTransactionTable.Size = new System.Drawing.Size(459, 302);
+            this.DgvTransactionTable.Size = new System.Drawing.Size(459, 355);
             this.DgvTransactionTable.TabIndex = 0;
+            this.DgvTransactionTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTransactionTable_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // OwnerId
+            // 
+            this.OwnerId.HeaderText = "OwnerId";
+            this.OwnerId.Name = "OwnerId";
+            this.OwnerId.ReadOnly = true;
+            this.OwnerId.Visible = false;
             // 
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
             // 
             // Type
             // 
             this.Type.HeaderText = "Type";
             this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
             this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Description
             // 
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
             // Date
             // 
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // Account
             // 
             this.Account.HeaderText = "Account";
             this.Account.Name = "Account";
+            this.Account.ReadOnly = true;
             // 
             // panel1
             // 
@@ -302,14 +301,12 @@ namespace SmartExpense.Pages
             this.PnlExpence.ResumeLayout(false);
             this.PnlIncome.ResumeLayout(false);
             this.PnlDataGridView.ResumeLayout(false);
-            this.PnlDataGridView.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTransactionTable)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.ComboBox CbAccounts;
-
-        private System.Windows.Forms.TextBox TbSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OwnerId;
 
         private System.Windows.Forms.Panel panel2;
 

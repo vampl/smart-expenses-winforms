@@ -25,3 +25,4 @@ D:\Development\Projects\C#\SmartExpense\SmartExpense\bin\Debug\EntityFramework.x
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.exe.config
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.csproj.CopyComplete
 D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.AccountDataFormerDialog.resources
+D:\Development\Projects\C#\SmartExpense\SmartExpense\obj\Debug\SmartExpense.Pages.TransactionDataFormerDialog.resources

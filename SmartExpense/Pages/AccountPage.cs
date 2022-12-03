@@ -38,14 +38,14 @@ namespace SmartExpense.Pages
         // add new row with user data.
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            var accountDataForm = new AccountDataFormerDialog();
-            var result = accountDataForm.ShowDialog(this);
- 
-            if (result == DialogResult.Cancel)
-                return;
-
             try
             {
+                var accountDataForm = new AccountDataFormerDialog();
+                var result = accountDataForm.ShowDialog(this);
+ 
+                if (result == DialogResult.Cancel)
+                    return;
+            
                 // get general connected database service.
                 var db = Locator.GetService<DatabaseController>();
                 db.InsertAccountData(accountDataForm.Account);

@@ -180,7 +180,7 @@
         private System.Windows.Forms.Button BtnAccountPage;
         private System.Windows.Forms.Button BtnProfilePage;
         
-        private System.Windows.Forms.Panel PnlPageSpace;
+        internal System.Windows.Forms.Panel PnlPageSpace;
         
         #endregion
     }
