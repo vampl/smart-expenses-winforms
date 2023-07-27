@@ -1,2 +1,2 @@
 # SmartExpense
-Expense tracking app project.
+Легкий та простий додаток ведення обліку витрати та надходжень.
